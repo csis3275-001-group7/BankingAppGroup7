@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+  <head th:replace="fragments/header :: header"></head>
+
+    <body style = "background-image: url('https://specials-images.forbesimg.com/imageserve/5fcd15ac2194b3351cd4f77b/960x0.jpg?cropX1=750&cropX2=4736&cropY1=586&cropY2=3244'); 
+  background-position: center; background-repeat: no-repeat;
+  background-attachment: fixed; background-size: 100% 100%;">
+    <nav th:replace="fragments/navigation-after-log :: nav-after-log"></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5" >CNT Bank of Canada</h1>
+          <p class="lead" >Manage you cards, balances and transactions easily!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title"><strong>Cards</strong></h3></div>
+          <div class="panel-body">
+              <table th:replace="fragments/cards-table :: cards-table"></table>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addCard">
+              <span class="glyphicon glyphicon-credit-card"></span> Add Card</button>
+            <div th:replace="fragments/add-card-modal :: add-card-modal"></div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <span th:replace="fragments/footer :: footer"></span>
+
+  </body>
+
+</html>

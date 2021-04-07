@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+  <head th:replace="fragments/header :: header"></head>
+
+    <body style = "background-image: url('https://www.bbva.com/wp-content/uploads/2018/08/MobileBankingEvol-1024x725.jpg'); 
+  background-position: center; background-repeat: no-repeat;
+  background-attachment: fixed; background-size: 100% 100%;">
+    <nav th:replace="fragments/navigation-after-log :: nav-after-log"></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5" style="color:white;">CNT Bank of Canada</h1>
+          <p class="lead" style="color:white;">Manage you cards, balances and transactions easily!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title"><strong>Card Transactions</strong></h3></div>
+          <div class="panel-body">
+              <div th:replace="fragments/transactions-table :: transactions-table"></div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransaction">
+              <span class="glyphicon glyphicon-transfer"></span> Make Transaction
+            </button>
+            <div th:replace="fragments/add-transaction-modal :: add-transaction-modal"></div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <span th:replace="fragments/footer :: footer"></span>
+
+  </body>
+
+</html>

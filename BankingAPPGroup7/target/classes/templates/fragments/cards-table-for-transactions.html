@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body style = "background-color:#FFFF33;" >
+
+        <div th:fragment="cards-table-for-transactions">
+            <div th:if="${insufficientFundsError}">
+                <div class="alert alert-danger">
+                    Insufficient Funds
+                </div>
+            </div>
+            <div th:if="${successfulTransaction}">
+                <div class="alert alert-success">
+                    Funds Transfered Successfully
+                </div>
+            </div>
+            <table class="table table-striped text-center" >
+                <thead th:if="${!#lists.isEmpty(currentUserCards)}">
+                <tr>
+       
+                    <th class="text-center">Card Number</th>
+                    <th class="text-center">Card Balance</th>
+                    <th class="text-center">Currency</th>
+                    <th class="text-center">Transactions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <span th:if="${#lists.isEmpty(currentUserCards)}" >Please Add cards First</span>
+                <tr th:each="card: ${currentUserCards}">
+                    <td th:text="${card.id}" />
+                    <td><strong th:text="${card.cardBalance}"></strong></td>
+                    <td class="text-success"><strong th:text="${card.currency}"></strong></td>
+                    <td><a th:href="@{/transactions/card/{id}(id=${card.id})}" class="btn btn-primary btn-sm" role="button">Show All Transactions</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>

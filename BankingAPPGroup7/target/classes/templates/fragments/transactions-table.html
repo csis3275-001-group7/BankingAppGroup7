@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body >
+        <div th:fragment="transactions-table">
+            <table class="table table-striped text-center">
+                <thead th:if="${!#lists.isEmpty(cardTransactions)}">
+                <tr>
+                	<th class="text-center">Transaction Number</th>
+                    <th class="text-center">Receiver Account Number</th>
+                    <th class="text-center">Purpose To Send</th>
+                    <th class="text-center">Total Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                <span th:if="${#lists.isEmpty(cardTransactions)}" >Empty transactions</span>
+                <tr th:each="transaction: ${cardTransactions}">
+                	<td th:text="${transaction.id}" />
+                    <td th:text="${transaction.acctnumber}" />
+                    <td th:text="${transaction.purpose}" />
+                    <td class="text-success"><strong th:text="${transaction.sum}"></strong></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>
