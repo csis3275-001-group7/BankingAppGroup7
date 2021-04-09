@@ -1,7 +1,7 @@
 # BankingAppGroup7
 
 Functionality
-Users
+Software
 
 * Edit user profile: click Account -> Settings on the page header
 * View user profile: click Account -> Profile on the page header
