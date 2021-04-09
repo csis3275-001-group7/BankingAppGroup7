@@ -18,3 +18,7 @@ Git Usage Commands
 
 ![image](https://user-images.githubusercontent.com/58495779/114218099-d6b1a600-991d-11eb-9dfb-b96647b65692.png)
 
+Sql Workbench Set Up Video
+
+https://www.youtube.com/watch?v=uKwR9fWsZJ4
+
