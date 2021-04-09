@@ -1,0 +1,24 @@
+package com.group7.bankingapp;
+
+import com.group7.bankingapp.domain.entity.Role;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class roleTests {
+
+    Role role = new Role();
+
+    @Test
+    public void testGetId(){
+        role.setId(23);
+        assertEquals(23, role.getId());
+    }
+
+    @Test
+    public void testGetRoleName(){
+        role.setRoleName("Fabus");
+        assertEquals("Fabus", role.getRoleName());
+    }
+
+}
