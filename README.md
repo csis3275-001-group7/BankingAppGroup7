@@ -22,3 +22,7 @@ Sql Workbench Set Up Video
 
 https://www.youtube.com/watch?v=uKwR9fWsZJ4
 
+sql Workbech connection setup
+
+https://www.youtube.com/watch?v=pER-N4esW58&t=423s
+
