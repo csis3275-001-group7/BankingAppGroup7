@@ -1,0 +1,46 @@
+package com.group7.bankingapp;
+
+import com.group7.bankingapp.auth.CustomUserDetails;
+import com.group7.bankingapp.domain.entity.User;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class userTests {
+
+    User user = new User();
+    CustomUserDetails userDetails = new CustomUserDetails(user);
+
+    @Test
+    public void testUsername(){
+        userDetails.setUsername("Apple");
+        assertEquals("Apple", userDetails.getUsername());
+    }
+
+    @Test
+    public void testPassword(){
+        userDetails.setPassword("Orange");
+        assertEquals("Orange", userDetails.getPassword());
+    }
+
+    @Test
+    public void testIsAccountNonExpired(){
+        assertEquals(true, userDetails.isAccountNonExpired());
+    }
+
+    @Test
+    public void testIsAccountNonLocked(){
+        assertEquals(true, userDetails.isAccountNonLocked());
+    }
+
+    @Test
+    public void testIsCredentialNonExpired(){
+        assertEquals(true, userDetails.isCredentialsNonExpired());
+    }
+
+    @Test
+    public void testIsEnabled(){
+        assertEquals(true, userDetails.isEnabled());
+    }
+
+
+}
