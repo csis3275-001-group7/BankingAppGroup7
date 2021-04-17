@@ -1,3 +1,4 @@
+
 # BankingAppGroup7
 
 Functionality
@@ -9,7 +10,7 @@ Software
 * Create a new bank account: click Create New Account on the homepage
 * Transfer money to a friend:
 * Click Show transactions to view transactions
-
+![Recording-7 (2)](https://user-images.githubusercontent.com/58495779/115127795-4531dc00-9f8e-11eb-80fd-28a583ca8082.gif)
 
 ![login](https://user-images.githubusercontent.com/58495779/114116880-59911d00-989a-11eb-86cc-3d14660de721.jpg)
 
